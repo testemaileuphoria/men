@@ -8,7 +8,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Web Design Mastery | WDM&Co</title>
+    <title>Club Euphoria </title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body>
 
@@ -24,7 +25,7 @@
       <div class="header__image__container">
         <div class="header__content">
           <h1>Enjoy Your Dream Vacation</h1>
-          <p>Book Hotels, Flights and stay packages at lowest price.</p>
+          <p style="color: aqua;">Book Hotels, Flights and stay packages at lowest price.</p>
         </div>
        
       </div>
@@ -34,18 +35,18 @@
       <h2 class="section__header">Popular Rooms</h2>
       <div class="popular__grid">
         <div class="popular__card">
-          <img src="assets/hotel-1.jpg" alt="popular hotel" />
+          <img src="assets/room1.jpg" alt="popular hotel" />
           <div class="popular__content">
             <div class="popular__card__header">
-              <h4>The Plaza Hotel</h4>
-              <h4>$499</h4>
-              <a href="room.html" class="btn" style="color:purple;">More</a>
+              <h4>JW Marriott Marquis Miami</h4>
+              <h4>$100</h4>
+              <a href="room1.html" class="btn" style="color:purple;">More</a>
             </div>
             <p>New York City, USA</p>
           </div>
         </div>
         <div class="popular__card">
-          <img src="assets/hotel-2.jpg" alt="popular hotel" />
+          <img src="assets/room2.jpg" alt="popular hotel" />
           <div class="popular__content">
             <div class="popular__card__header">
               <h4>Ritz Paris</h4>
@@ -56,7 +57,7 @@
           </div>
         </div>
         <div class="popular__card">
-          <img src="assets/hotel-3.jpg" alt="popular hotel" />
+          <img src="assets/room3.jpg" alt="popular hotel" />
           <div class="popular__content">
             <div class="popular__card__header">
               <h4>The Peninsula</h4>
@@ -109,6 +110,26 @@
     </footer>
     <!-- Add a div for the black overlay -->
     <div class="overlay"></div>
+    <script>
+      const headerImageContainer = document.querySelector('.header__image__container');
+      const backgroundImages = [
+        'url("assets/bg1.jpg")',
+        'url("assets/bg2.jpg")',
+        'url("assets/bg3.jpg")',
+        'url("assets/b4.jpg")',
+        'url("assets/bg5.jpg")',
+        'url("assets/bg6.jpg")',
+      ];
+      let currentImageIndex = 0;
+
+      function changeBackgroundImage() {
+        headerImageContainer.style.backgroundImage = backgroundImages[currentImageIndex];
+        currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+      }
+
+      // Call changeBackgroundImage every 5 seconds (adjust the interval as needed)
+      setInterval(changeBackgroundImage, 2000);
+    </script>
   </body>
 </html>
 
@@ -205,7 +226,7 @@ nav {
       rgba(44, 56, 85, 0.9),
       rgba(100, 125, 187, 0.1)
     ),
-    url("assets/header.jpg");
+    url("assets/header23.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -598,5 +619,4 @@ window.addEventListener('load', showModal);
 
 // Event listener to hide the modal when the "Close" button is clicked
 closeModalButton.addEventListener('click', hideModal);
-
 </script>

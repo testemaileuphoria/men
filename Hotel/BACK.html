@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Changing Background</title>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>
+<style>
+    #box {
+        margin: 300px auto; /* Adjust margin as needed */
+        height: 300px;
+        width: 450px;
+        border: 2px solid crimson;
+        animation-name: example;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        background-size: cover; /* Ensure the background image covers the entire div */
+    }
+
+    @keyframes example {
+        0% {
+            background-image: url('hotel-3.jpg'); /* Specify the correct image URL */
+        }
+        25% {
+            background-image: url('hotel-7.jpg'); /* Specify the correct image URL */
+        }
+        50% {
+            background-image: url('image3.jpg'); /* Specify the correct image URL */
+        }
+        75% {
+            background-image: url('hotel-3.jpg'); /* Specify the correct image URL */
+        }
+        100% {
+            background-image: url('image5.jpg'); /* Specify the correct image URL */
+        }
+    }
+</style>
