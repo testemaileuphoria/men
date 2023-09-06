@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hotel Booking</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">Welcome to Our Hotel Booking</h1>
+        <p class="description">
+            Discover the perfect place to stay for your next vacation. Our luxurious rooms offer breathtaking views and top-notch amenities to make your stay memorable.
+        </p>
+        <div class="video-container">
+            <video controls autoplay loop>
+                <source src="room.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER_HERE" class="book-now-btn" target="_blank">Book Now</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to bottom, #4a0063, #000000); /* Initial gradient */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: gradientAnimation 10s infinite; /* Apply animation */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-image: linear-gradient(to bottom, #4a0063, #000000);
+    }
+    25% {
+        background-image: linear-gradient(to bottom, #000000, #4a0063);
+    }
+    50% {
+        background-image: linear-gradient(to bottom, #4a0063, #000000);
+    }
+    75% {
+        background-image: linear-gradient(to bottom, #000000, #4a0063);
+    }
+    100% {
+        background-image: linear-gradient(to bottom, #4a0063, #000000);
+    }
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(113 48 100 / 80%);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.page-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+}
+
+video {
+    max-width: 100%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+}
+
+.book-now-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.book-now-btn:hover {
+    background-color: darkred;
+}
+
+</style>
+
+<script>
+    const video = document.querySelector('video');
+
+// Function to resize the video element
+function resizeVideo() {
+    const videoContainer = document.querySelector('.video-container');
+    const videoAspectRatio = video.videoWidth / video.videoHeight;
+
+    // Calculate the new width and height based on the container's dimensions
+    const containerWidth = videoContainer.clientWidth;
+    const containerHeight = videoContainer.clientHeight;
+    
+    let newWidth = containerWidth;
+    let newHeight = containerWidth / videoAspectRatio;
+
+    if (newHeight > containerHeight) {
+        newHeight = containerHeight;
+        newWidth = containerHeight * videoAspectRatio;
+    }
+
+    video.style.width = `${newWidth}px`;
+    video.style.height = `${newHeight}px`;
+}
+
+// Listen for video load event and resize the video
+video.addEventListener('loadedmetadata', resizeVideo);
+window.addEventListener('resize', resizeVideo);
+
+</script>

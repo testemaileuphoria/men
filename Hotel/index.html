@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Web Design Mastery | WDM&Co</title>
+  </head>
+  <body>
+
+    
+    </div>
+    <nav>
+      <div class="nav__logo">Club Euphoria | Hotel</div>
+      <ul class="nav__links">
+        
+      </ul>
+    </nav>
+    <header class="section__container header__container">
+      <div class="header__image__container">
+        <div class="header__content">
+          <h1>Enjoy Your Dream Vacation</h1>
+          <p>Book Hotels, Flights and stay packages at lowest price.</p>
+        </div>
+       
+      </div>
+    </header>
+
+    <section class="section__container popular__container">
+      <h2 class="section__header">Popular Rooms</h2>
+      <div class="popular__grid">
+        <div class="popular__card">
+          <img src="assets/hotel-1.jpg" alt="popular hotel" />
+          <div class="popular__content">
+            <div class="popular__card__header">
+              <h4>The Plaza Hotel</h4>
+              <h4>$499</h4>
+            </div>
+            <p>New York City, USA</p>
+          </div>
+        </div>
+        <div class="popular__card">
+          <img src="assets/hotel-2.jpg" alt="popular hotel" />
+          <div class="popular__content">
+            <div class="popular__card__header">
+              <h4>Ritz Paris</h4>
+              <h4>$549</h4>
+            </div>
+            <p>Paris, France</p>
+          </div>
+        </div>
+        <div class="popular__card">
+          <img src="assets/hotel-3.jpg" alt="popular hotel" />
+          <div class="popular__content">
+            <div class="popular__card__header">
+              <h4>The Peninsula</h4>
+              <h4>$599</h4>
+              <a href="room.html" class="btn" style="color:purple;">More</a>
+
+            </div>
+            <p>Hong Kong</p>
+          </div>
+        </div>
+        <div class="popular__card">
+          <img src="assets/hotel-4.jpg" alt="popular hotel" />
+          <div class="popular__content">
+            <div class="popular__card__header">
+              <h4>Atlantis The Palm</h4>
+              <h4>$449</h4>
+            </div>
+            <p>Dubai, United Arab Emirates</p>
+          </div>
+        </div>
+        <div class="popular__card">
+          <img src="assets/hotel-5.jpg" alt="popular hotel" />
+          <div class="popular__content">
+            <div class="popular__card__header">
+              <h4>The Ritz-Carlton</h4>
+              <h4>$649</h4>
+            </div>
+            <p>Tokyo, Japan</p>
+          </div>
+        </div>
+        <div class="popular__card">
+          <img src="assets/hotel-6.jpg" alt="popular hotel" />
+          <div class="popular__content">
+            <div class="popular__card__header">
+              <h4>Marina Bay Sands</h4>
+              <h4>$549</h4>
+            </div>
+            <p>Singapore</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+      </div>
+      
+    </footer>
+    <!-- Add a div for the black overlay -->
+    <div class="overlay"></div>
+  </body>
+</html>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --primary-color: #2c3855;
+  --primary-color-dark: #435681;
+  --text-dark: #333333;
+  --text-light: #767268;
+  --extra-light: #f3f4f6;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  color: white; /* Set the text color to white for the entire page */
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white; /* Set the text color to white */
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow for better visibility */
+}
+
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white; /* Adjust the color of the logo text */
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link a {
+  font-weight: 500;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+
+.header__container {
+  padding: 1rem 1rem 5rem 1rem;
+}
+
+.header__image__container {
+  position: relative;
+  min-height: 500px;
+  background-image: linear-gradient(
+      to right,
+      rgba(44, 56, 85, 0.9),
+      rgba(100, 125, 187, 0.1)
+    ),
+    url("assets/header.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2rem;
+}
+
+.header__content {
+  max-width: 600px;
+  padding: 5rem 2rem;
+}
+
+.header__content h1 {
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  font-weight: 600;
+  color: white; /* Set the text color to white for the header title */
+}
+
+.header__content p {
+  color: var(--extra-light); /* Adjust the text color for the description */
+}
+
+.booking__container {
+  position: absolute;
+  bottom: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 6rem);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.booking__container form {
+  width: 100%;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.booking__container .input__group {
+  width: 100%;
+  position: relative;
+}
+
+.booking__container label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white; /* Set label text color to white */
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.booking__container input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--primary-color);
+  color: white; /* Set input text color to white */
+}
+
+.booking__container input:focus ~ label {
+  font-size: 0.8rem;
+  top: 0;
+}
+
+.booking__container .form__group p {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.booking__container .btn {
+  padding: 1rem;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white; /* Set button text color to white */
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.booking__container .btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.popular__grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.popular__card {
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  color: white; /* Set the text color to white within .popular__card */
+}
+
+.popular__card__header h4,
+.popular__card__header p {
+  color: white; /* Set the text color to white for h4 and p elements within .popular__card__header */
+}
+
+.popular__content p {
+  color: white; /* Set the text color to white within .popular__content */
+}
+
+
+.client {
+  background-color: var(--extra-light);
+}
+
+.client__grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.client__card {
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.client__card img {
+  max-width: 80px;
+  margin: auto;
+  margin-bottom: 1rem;
+  border-radius: 100%;
+}
+
+.client__card p {
+  text-align: center;
+  color: var(--text-dark);
+}
+
+.reward__container {
+  padding: 2rem;
+  text-align: center;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.reward__container p {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.reward__container h4 {
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.reward__btn {
+  padding: 1rem 3rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reward__btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.footer {
+  background-color: var(--extra-light);
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 5rem;
+}
+
+.footer__col h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.footer__col h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.footer__col p {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer__col p:hover {
+  color: var(--text-dark);
+}
+
+.footer__bar {
+  position: relative;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-light);
+  text-align: right;
+  overflow: hidden;
+}
+
+.footer__bar::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 28rem;
+  transform: translateY(-50%);
+  width: 20rem;
+  height: 2px;
+  background-color: var(--text-light);
+}
+
+@media (max-width: 900px) {
+  .booking__container form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .popular__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .client__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .nav__links {
+    display: none;
+  }
+
+  .header__container {
+    padding-bottom: 25rem;
+  }
+
+  .booking__container {
+    flex-direction: column;
+    bottom: -25rem;
+  }
+
+  .booking__container form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .popular__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .client__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer__container {
+    gap: 2rem;
+  }
+}
+
+.popular__card a.btn {
+  padding: 1rem 2rem; /* Adjust padding as needed */
+  font-size: 1rem; /* Adjust font size as needed */
+  color: var(--primary-color); /* Set the text color to your primary color */
+  background-color: white; /* Set the background color to white */
+  border-radius: 1rem;
+  text-align: center;
+  display: inline-block;
+  transition: 0.3s;
+  margin-top: 1rem; /* Add some top margin to separate it from the text */
+}
+
+.popular__card a.btn:hover {
+  background-color: var(--primary-color-dark); /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
+
+
+/* Style for the modal popup */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 90%; /* Set a maximum width for the modal */
+    width: 90%; /* Set a width as a percentage of the viewport width */
+    max-height: 90%; /* Set a maximum height for the modal */
+    overflow-y: auto; /* Add vertical scroll if needed */
+}
+
+.modal-content {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Style for the black overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+/* Add this CSS inside your existing media queries for responsiveness */
+
+/* Example: Adjusting button size for screens less than 600px */
+@media (max-width: 600px) {
+  .btn {
+    padding: 0.8rem 2rem; /* Adjust padding as needed */
+    font-size: 1rem; /* Adjust font size as needed */
+  }
+}
+
+</style>
+
+<script>
+  // Get references to the modal and overlay elements
+const modal = document.getElementById('myModal');
+const overlay = document.querySelector('.overlay');
+const closeModalButton = document.getElementById('closeModal');
+
+// Function to show the modal and overlay
+function showModal() {
+    modal.style.display = 'block';
+    overlay.style.display = 'block';
+}
+
+// Function to hide the modal and overlay
+function hideModal() {
+    modal.style.display = 'none';
+    overlay.style.display = 'none';
+}
+
+// Event listener to show the modal when the page loads
+window.addEventListener('load', showModal);
+
+// Event listener to hide the modal when the "Close" button is clicked
+closeModalButton.addEventListener('click', hideModal);
+
+</script>
